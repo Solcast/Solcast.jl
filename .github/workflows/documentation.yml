@@ -1,0 +1,24 @@
+name: Documentation
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Julia
+        uses: julia-actions/setup-julia@latest
+        with:
+          version: '1.8.1'
+
+      - name: Build package
+        uses: julia-actions/julia-buildpkg@v1
+
+      - name: Build documentation and deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT_TOKEN }} # For authentication with GitHub Actions token
+        run: julia --project=. docs/make.jl

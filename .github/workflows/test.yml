@@ -1,0 +1,32 @@
+name: Julia Test Matrix
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+        julia-version: [1.8.1]  # Adjust Julia versions as needed
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Julia
+        uses: julia-actions/setup-julia@latest
+        with:
+          version: ${{ matrix.julia-version }}
+
+      - name: Build package
+        uses: julia-actions/julia-buildpkg@v1
+
+      - name: Run tests
+        env:
+          SOLCAST_API_KEY: ${{ secrets.SOLCAST_API_KEY }}
+        uses: julia-actions/julia-runtest@v1

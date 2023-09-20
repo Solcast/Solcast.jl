@@ -18,6 +18,5 @@ Documenter = "0.27"
 HTTP = "1.9"
 JSON = "0.21"
 
-
 [main]
 MyPackage = "src/Solcast.jl"

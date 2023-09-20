@@ -29,5 +29,5 @@ end
 
     @test res.status_code == 400
     @test res.success == false
-    @test res.exception == "Must specify exactly one of duration or end_date"
+    @test res.exception == "Must specify exactly one of \"duration\" and \"end\""
 end

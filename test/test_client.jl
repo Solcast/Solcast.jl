@@ -13,7 +13,6 @@ end
 @test check_params(Dict("api_key" => "test-key"))[2] == "test-key"
 
 @testset "test client and its methods" begin
-    println(ENV["SOLCAST_API_KEY"])
     client = Client(base_url, historic_radiation_and_weather, user_agent)
     params = Dict("latitude" => -33.856784, "longitude" => 151.215297, "start" => "2022-10-25T14:45:00.000Z", "format" => "json", "output_parameters" => ["air_temp"], "duration" => "P1D")
 

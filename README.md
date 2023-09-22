@@ -11,7 +11,6 @@
 ## Install
 
 ```commandline
-TODO: Deploy on julia registry
 using Pkg; Pkg.add("Solcast")
 ```
 

@@ -44,6 +44,12 @@ Solcast.version
 
 The version should print on the command line.
 
+### How to publish the package to the Julia registry?
+
+- Set the `Project.toml` version field in your repository to your new desired version
+- Comment `@JuliaRegistrator register` on the commit/branch you want to register
+- Wait for the automatic tests to pass and the TagBot GitHub Action to tag and make a github release
+
 ## Basic Usage
 
 ```julia

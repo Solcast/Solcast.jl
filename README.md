@@ -1,12 +1,14 @@
-<img src="https://github.com/Solcast/Solcast.jl/blob/main/docs/src/assets/logo.png?raw=true" width="100" align="right">
+<img src="https://github.com/Solcast/solcast-api-python-sdk/blob/main/docs/img/logo.png?raw=true" width="100" align="right">
 
 # Solcast API Julia SDK
 
-`<em>`simple Julia SDK to access the Solcast API`</em>`
+<em>simple Julia SDK to access the Solcast API</em>
+
+[![Docs](https://github.com/Solcast/Solcast.jl/actions/workflows/documentation.yml/badge.svg)](https://github.com/Solcast/Solcast.jl/actions/workflows/documentation.yml) [![Tests](https://github.com/Solcast/Solcast.jl/actions/workflows/test.yml/badge.svg)](https://github.com/Solcast/Solcast.jl/actions/workflows/test.yml) [![Publish 📦 to Pkg](https://github.com/Solcast/Solcast.jl/actions/workflows/tagbot.yml/badge.svg)](https://github.com/Solcast/Solcast.jl/actions/workflows/tagbot.yml)
 
 ---
 
-**Documentation**: `<a href="https://solcast.github.io/Solcast.jl/" target="_blank">`https://solcast.github.io/Solcast.jl/ `</a>`
+**Documentation**: <a href="https://solcast.github.io/Solcast.jl/" target="_blank">https://solcast.github.io/Solcast.jl/ </a>
 
 ## Install
 

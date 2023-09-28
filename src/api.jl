@@ -138,7 +138,14 @@ Validates and prepares the parameters for an API request.
 - `ValueError`: If validation fails or if the API key is missing or too short.
 
 """
-function check_params(params::Dict)
+function check_params(raw_params::Dict)
+
+    params = Dict{String, Any}()
+    for (k, v) in raw_params
+        string_key = string(k)
+        params[string_key] = v
+    end
+
     # Validates that the params dictionary has an api_key
     if !haskey(params, "api_key")
         if haskey(ENV, "SOLCAST_API_KEY")

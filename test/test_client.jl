@@ -1,7 +1,7 @@
 using Solcast: check_params, version, ValueError, Client, Response, base_url, historic_radiation_and_weather, user_agent, to_dict, to_dataframe, get_response
 using Test
 
-@test version == "1.0.1"
+@test version == "0.1.2"
 
 # Fails because the API key is short in size
 @testset "fail when API key is short" begin

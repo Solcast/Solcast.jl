@@ -1,4 +1,4 @@
-version = "1.0.1"
+version = "0.1.2"
 base_url = "https://api.solcast.com.au/data"
 live_radiation_and_weather = "/live/radiation_and_weather"
 live_rooftop_pv_power = "/live/rooftop_pv_power"

@@ -1,4 +1,4 @@
-using Solcast: check_params, version, ValueError, Client, Response, base_url, historic_radiation_and_weather, user_agent, to_dict, to_dataframe, get_response
+using Solcast: Historic, check_params, version, ValueError, Client, Response, base_url, historic_radiation_and_weather, user_agent, to_dict, to_dataframe, get_response, load_test_locations_coordinates
 using Test
 
 @test version == "0.1.2"
@@ -26,6 +26,17 @@ end
     @test res.status_code == 200
     @test res.success == true
     @test length(to_dict(res)) == 1
+
+end
+
+@testset "make a request with api key sent as parameter" begin
+    lats, longs, resources_ids = load_test_locations_coordinates()
+    res = Historic.radiation_and_weather(lats[1], longs[1], "2022-10-25T14:45:00.000Z"; output_parameters=["air_temp"], duration="P1D", api_key=ENV["SOLCAST_API_KEY"])
+
+    @test res.status_code == 200
+    @test res.success == true
+    @test length(Historic.to_dict(res)) == 1
+    @test size(Historic.to_dataframe(res))[2] == 2
 
 end
 

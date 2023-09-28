@@ -16,25 +16,6 @@
 using Pkg; Pkg.add("Solcast")
 ```
 
-or from source:
-
-```commandline
-git clone https://github.com/Solcast/Solcast.jl.git
-cd Solcast.jl
-```
-
-Go to Julia REPL and open package management mode using `]`, to install the package:
-
-```
-dev .
-```
-
-OR
-
-```
-dev `/absolute-path/to/the/repo`
-```
-
 To check if the package has been installed in the local Julia registry, go back to Julia prompt and run the following snippet:
 
 ```
@@ -66,6 +47,27 @@ Don't forget to set your [account Api Key](https://toolkit.solcast.com.au/regist
 ---
 
 ## Contributing
+
+### To install from source:
+
+```commandline
+git clone https://github.com/Solcast/Solcast.jl.git
+cd Solcast.jl
+```
+
+Go to Julia REPL and open package management mode using `]`, to install the package:
+
+```
+dev .
+```
+
+OR
+
+```
+dev `/absolute-path/to/the/repo`
+```
+
+### How to run the tests?
 
 Tests are run against the Solcast API, you will need a key to run them.
 They are executed on `unmetered locations` and as such won't consume your credits.
